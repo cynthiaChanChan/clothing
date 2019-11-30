@@ -1,8 +1,9 @@
 import React from 'react';
 
-const customeButton = ({ children, ...otherProps }) => {
+const customeButton = ({ children, isGoogleSignIn, ...otherProps }) => {
+    const className = `custom-button ${isGoogleSignIn ? 'google-sign-in' : ''}`;
     return (
-        <button className="custom-button" {...otherProps}>{children}</button>
+        <button className={className} {...otherProps}>{children}</button>
     );
 };
 

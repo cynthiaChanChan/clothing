@@ -20,6 +20,12 @@
 	overflow: hidden;
 }
 
+@mixin shrinkLabel {
+	top: -14px;
+	font-size: 12px;
+	color: $grey;
+}
+
 //placeholder
 @mixin placeholder($color, $fontSize) {
 
