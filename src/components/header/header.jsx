@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import { auth } from '../../firebase/firebase.utils';
+import CartDropdown from '../cart-dropdown/cart-dropdown';
+import CardIcon from '../card-icon/card-icon';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 
-import { connect } from 'react-redux';
 
 const Header = ({ currentUser }) => {
     return (
@@ -20,7 +22,9 @@ const Header = ({ currentUser }) => {
                     <div className="option" onClick={() => auth.signOut()}>Sign out</div>
                     : <Link to="/signin" className="option">Sign in</Link>
                 }
+                <CardIcon />
             </div>
+            <CartDropdown />
         </header>
     );
 };
