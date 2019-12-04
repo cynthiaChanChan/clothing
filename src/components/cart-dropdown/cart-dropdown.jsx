@@ -12,7 +12,7 @@ const CartDropdown = ({ hidden }) => {
     );
 };
 
-const mapStatesToProps = ({ cart }) => ({
+const mapStateToProps = ({ cart }) => ({
     hidden: cart.hidden
 });
-export default connect(mapStatesToProps)(CartDropdown);
+export default connect(mapStateToProps)(CartDropdown);

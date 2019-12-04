@@ -5,9 +5,9 @@ import CollectionItem from '../collection-item/collection-item';
 class CollectionPreview extends React.Component {
 
     renderList = (items) => {
-        return items.filter((item, idx) => idx < 4).map(({ id, ...itemProps}) => {
+        return items.filter((item, idx) => idx < 4).map((item) => {
             return (
-                <CollectionItem key={id} {...itemProps}/>
+                <CollectionItem key={item.id} item={item} />
             );
         });
     };
