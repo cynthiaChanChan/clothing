@@ -21,11 +21,14 @@ export const removeItemToArray = (items, itemToRemove) => {
 
     if (existingItem.quantity === 1) {
         return items.filter(item => item.id !== existingItem.id);
+    } else if (existingItem.quantity > 1) {
+        return items.map(item => {
+            return item.id === existingItem.id ?
+            {...item, quantity: item.quantity -1}
+            : item;
+        });
     }
 
-    return items.map(item => {
-        return item.id === existingItem.id ?
-        {...item, quantity: item.quantity -1}
-        : item;
-    });
+    return items;
+
 };
