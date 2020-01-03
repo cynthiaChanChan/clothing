@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -10,11 +10,11 @@ import CardIcon from '../card-icon/card-icon';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, history }) => {
     return (
         <header className="header">
             <div className="logo-container">
-                <Logo className="logo" />
+                <Logo className="logo" onClick={() => history.push('/')} />
             </div>
             <div className="options">
                 <Link to="/shop" className="option">shop</Link>
@@ -35,4 +35,4 @@ const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser
 });
 
-export default connect(mapStateToProps)(Header);
+export default withRouter(connect(mapStateToProps)(Header));

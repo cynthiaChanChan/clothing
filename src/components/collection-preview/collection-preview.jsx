@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import CollectionItem from '../collection-item/collection-item';
 
@@ -13,10 +14,10 @@ class CollectionPreview extends React.Component {
     };
 
     render() {
-        const {title, items} = this.props;
+        const { title, items, routeName, match, history } = this.props;
         return (
             <div className='collection-preview'>
-                <h1 className="title">{title}</h1>
+                <h1 className="title" onClick={() => history.push(`${match.path}/${routeName}`)}>{title}</h1>
                 <div className="preview">
                     {this.renderList(items)}
                 </div>
@@ -25,4 +26,4 @@ class CollectionPreview extends React.Component {
     }
 }
 
-export default CollectionPreview;
+export default withRouter(CollectionPreview);
