@@ -17,7 +17,7 @@ class CollectionPreview extends React.Component {
         const { title, items, routeName, match, history } = this.props;
         return (
             <div className='collection-preview'>
-                <h1 className="title" onClick={() => history.push(`${match.path}/${routeName}`)}>{title}</h1>
+                <h2 className="title" onClick={() => history.push(`${match.path}/${routeName}`)}>{title}</h2>
                 <div className="preview">
                     {this.renderList(items)}
                 </div>
