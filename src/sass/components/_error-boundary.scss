@@ -1,0 +1,24 @@
+.error {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.errorImage {
+    display: inline-block;
+    background-image: url(../../assets/broken.png);
+    background-size: cover;
+    background-position: center;
+    width: 40vh;
+    height: 40vh;
+}
+
+
+h2 {
+    font-size: 28px;
+    color: #2f8e89;
+}

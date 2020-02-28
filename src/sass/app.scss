@@ -6,7 +6,6 @@
 
 @import "base/animations";
 @import "base/base";
-@import "base/typography";
 @import "base/utilities";
 
 @import "components/directory";
@@ -25,7 +24,8 @@
 @import "components/checkout";
 @import "components/checkout-item";
 @import "components/collection";
-@import "components/_with-spinner";
+@import "components/with-spinner";
+@import "components/error-boundary";
 
 @import "pages/homepage";
 @import "pages/shop";

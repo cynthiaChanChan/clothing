@@ -8,4 +8,8 @@
         width: 100%;
         margin-bottom: 1rem;
     }
+
+    @media screen and (max-width: 50em) {
+        margin-bottom: 30px;
+    }
 }

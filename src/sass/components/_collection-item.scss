@@ -22,6 +22,13 @@
       transform: translateX(-50%);
       display: none;
 
+      @media screen and (max-width: 50em) {
+        display: block;
+        opacity: 0.9;
+        min-width: unset;
+        padding: 0 10px;
+      }
+
     }
 
     &:hover {
@@ -52,6 +59,9 @@
         text-align: right;
       }
     }
-
+    @media screen and (max-width: 50em) {
+      width: 45vw;
+      margin-bottom: 20px;
+    }
 }
   

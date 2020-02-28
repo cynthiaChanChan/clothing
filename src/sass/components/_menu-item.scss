@@ -8,6 +8,10 @@
     overflow: hidden;
     cursor: pointer;
 
+    @media screen and (max-width: 50em) {
+      height: 200px;
+    }
+
     &:hover {
 
       .background-image {
@@ -23,6 +27,9 @@
   
     &.large {
       height: 380px;
+      @media screen and (max-width: 50em) {
+        height: 200px;
+      }
     }
 
     .background-image {

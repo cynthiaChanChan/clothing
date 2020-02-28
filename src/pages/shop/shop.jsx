@@ -44,7 +44,6 @@ const mapStateToProps = createStructuredSelector({
     collectionsIsLoaded: selectIsCollectionsLoaded
 });
 
-
 const mapDispatchToProps = {
     fetchCollectionsStartAsync
 };
