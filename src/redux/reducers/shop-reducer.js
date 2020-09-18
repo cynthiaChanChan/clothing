@@ -1,30 +1,36 @@
-import  { FETCH_COLLECTIONS_SUCCESS, FETCH_COLLECTIONS_START, FETCH_COLLECTIONS_FAILURE } from '../type';
+import SHOP_DATA from "./shop.data";
+
+import {
+    FETCH_COLLECTIONS_SUCCESS,
+    FETCH_COLLECTIONS_START,
+    FETCH_COLLECTIONS_FAILURE,
+} from "../type";
 
 const INITIAL_STATE = {
-    collections: null,
+    collections: SHOP_DATA,
     isFetching: false,
-    errMessage: undefined
+    errMessage: undefined,
 };
 
-const shopReducer = (state=INITIAL_STATE, action) => {
-    switch(action.type) {
-        case FETCH_COLLECTIONS_START:
-            return {
-                ...state,
-                isFetching: true
-            }
-        case FETCH_COLLECTIONS_SUCCESS: 
-            return {
-                ...state,
-                collections: action.payload,
-                isFetching: false
-            }
-        case FETCH_COLLECTIONS_FAILURE: 
-            return {
-                ...state,
-                errMessage: action.payload,
-                isFetching: false
-            }
+const shopReducer = (state = INITIAL_STATE, action) => {
+    switch (action.type) {
+        // case FETCH_COLLECTIONS_START:
+        //     return {
+        //         ...state,
+        //         isFetching: true
+        //     }
+        // case FETCH_COLLECTIONS_SUCCESS:
+        //     return {
+        //         ...state,
+        //         collections: action.payload,
+        //         isFetching: false
+        //     }
+        // case FETCH_COLLECTIONS_FAILURE:
+        //     return {
+        //         ...state,
+        //         errMessage: action.payload,
+        //         isFetching: false
+        //     }
         default:
             return state;
     }
